@@ -20,6 +20,9 @@ WORKDIR /app
 # Copia el proyecto al contenedor
 COPY . .
 
+# Cambia los permisos del script mvnw para hacerlo ejecutable
+RUN chmod +x ./mvnw
+
 # Compila el proyecto usando Maven
 RUN ./mvnw clean package
 
@@ -33,7 +36,6 @@ COPY --from=build /app/target/*.jar app.jar
 
 # Comando para ejecutar la aplicación
 ENTRYPOINT ["java", "-jar", "app.jar"]
-
 
 
 
