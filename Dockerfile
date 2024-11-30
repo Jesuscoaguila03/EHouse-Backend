@@ -34,18 +34,6 @@ COPY --from=build /app/target/*.jar app.jar
 # Comando para ejecutar la aplicación
 ENTRYPOINT ["java", "-jar", "app.jar"]
 
-FROM eclipse-temurin:17-jdk AS build
 
-# Establece el directorio de trabajo
-WORKDIR /app
-
-# Copia el proyecto al contenedor
-COPY . .
-
-# Asegura permisos de ejecución para Maven Wrapper
-RUN chmod +x ./mvnw
-
-# Compila el proyecto usando Maven
-RUN ./mvnw clean package
 
 
