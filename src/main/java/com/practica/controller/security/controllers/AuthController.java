@@ -20,7 +20,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 //@CrossOrigin(origins = "${ip.frontend}")
-@CrossOrigin(origins = "*", allowedHeaders = "*", exposedHeaders = "Authorization")
+@CrossOrigin(origins = "https://e-house.vercel.app", allowedHeaders = "*", exposedHeaders = "Authorization")
 @RestController
 public class AuthController {
 

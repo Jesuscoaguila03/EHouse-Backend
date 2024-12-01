@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin(origins = "https://e-house.vercel.app", allowedHeaders = "*")
 @RequestMapping("/api")
 public class ReservaController {
     @Autowired

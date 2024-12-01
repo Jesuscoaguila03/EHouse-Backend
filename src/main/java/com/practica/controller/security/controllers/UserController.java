@@ -9,7 +9,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "${ip.frontend}")
+@CrossOrigin(origins = "https://e-house.vercel.app")
 @RestController
 @RequestMapping("/api")
 public class UserController {
